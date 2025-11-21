@@ -1,5 +1,6 @@
 # Ignore installed dependencies
 node_modules/
+dist/
 
 # Ignore compiled/bundled output files
 bundle.js
@@ -8,3 +9,5 @@ bundle.js
 # Ignore OS files
 .DS_Store
 Thumbs.db
+
+.vscode
