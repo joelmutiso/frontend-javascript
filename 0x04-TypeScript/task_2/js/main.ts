@@ -37,7 +37,7 @@ class Teacher implements TeacherInterface {
 }
 
 // 3. Create Employee Function
-function createEmployee(salary: number | string): Director | Teacher {
+export function createEmployee(salary: number | string): Director | Teacher {
   if (typeof salary === 'number' && salary < 500) {
     return new Teacher();
   }
@@ -45,12 +45,12 @@ function createEmployee(salary: number | string): Director | Teacher {
 }
 
 // 4. isDirector Function (Type Predicate)
-function isDirector(employee: Director | Teacher): employee is Director {
+export function isDirector(employee: Director | Teacher): employee is Director {
   return (employee as Director).workDirectorTasks !== undefined;
 }
 
 // 5. executeWork Function
-function executeWork(employee: Director | Teacher): string {
+export function executeWork(employee: Director | Teacher): string {
   if (isDirector(employee)) {
     return employee.workDirectorTasks();
   } else {
